@@ -1,6 +1,6 @@
 # FS-AWS-Standard
 
-A Terraform reference module that brings First Student's Azure naming and tagging
+A Terraform reference module that brings First Stones's Azure naming and tagging
 discipline into AWS, and makes every server build come out standardized, tagged,
 patched, backed up, and monitored automatically.
 
@@ -48,7 +48,7 @@ Example: `FS-CIN-P-HALO-APP-01`
 
 | Segment | Meaning | Example |
 |---|---|---|
-| FS | First Student | FS |
+| FS | First Stone | FS |
 | LOCATION | Data center code | CIN (Cincinnati) |
 | ENV | Environment | P (prod), Q (qa), D (dev) |
 | APP | Application | HALO |
