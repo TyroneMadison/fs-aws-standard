@@ -50,3 +50,19 @@ module "db_server" {
   instance_profile = aws_iam_instance_profile.ssm_instance.name
   owner            = var.owner
 }
+
+module "gw_server" {
+  source = "./modules/standard-server"
+
+  location_code    = var.location_code
+  environment      = var.primary_environment
+  app_name         = "HALO"
+  server_role      = "gw"
+  instance_index   = 1
+  instance_type    = "t3.micro"
+  ami_id           = data.aws_ssm_parameter.al2023.value
+  subnet_id        = aws_subnet.public.id
+  vpc_id           = aws_vpc.main.id
+  instance_profile = aws_iam_instance_profile.ssm_instance.name
+  owner            = var.owner
+}

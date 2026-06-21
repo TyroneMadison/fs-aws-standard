@@ -20,3 +20,8 @@ output "patch_groups" {
   description = "Patch groups registered to the baseline."
   value       = sort([for g in aws_ssm_patch_group.env : g.patch_group])
 }
+
+output "gateway_server_name" {
+  description = "Gateway server added as project extension."
+  value       = module.gw_server.name
+}
